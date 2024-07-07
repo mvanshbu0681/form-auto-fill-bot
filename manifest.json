@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Form Auto-Fill Bot",
+    "version": "1.0",
+    "description": "Automatically fills forms using ChatGPT.",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.google.com/forms/*", "*://*.microsoft.com/forms/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
