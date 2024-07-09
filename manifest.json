@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Google Form Auto Answer",
+  "name": "Form Auto Answer",
   "version": "1.0",
   "permissions": [
     "activeTab",
@@ -11,7 +11,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://docs.google.com/forms/*"],
+      "matches": [
+        "https://docs.google.com/forms/*",
+        "https://forms.office.com/*"
+      ],
       "js": ["content.js"]
     }
   ],
