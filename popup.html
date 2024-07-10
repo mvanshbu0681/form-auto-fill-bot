@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Form Auto-Fill Bot</title>
-  <script src="popup.js"></script>
+  <title>Google Form Auto Answer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 200px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 <body>
-  <h1>Form Auto-Fill Bot</h1>
-  <button id="start">Start Auto-Fill</button>
+  <h3>Auto Answer Google Form</h3>
+  <button id="start">Start Auto Answer</button>
+  <button id="stop" disabled>Stop Auto Answer</button>
+
+  <script src="popup.js"></script>
 </body>
 </html>
